@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Service Requests</h2>
+<ul>
+    {% for request in requests %}
+        <li>{{ request.request_type }} - {{ request.status }} (Submitted: {{ request.created_at }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
